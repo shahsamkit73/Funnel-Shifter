@@ -1,3 +1,5 @@
+# use this lines to get output
+
 vdd vdd gnd 1.8v
 vin in gnd pulse 0 1.8 0ns 1ps 1ps 1ns 2.002ns 50
 .tran 0.02ns 50ns
