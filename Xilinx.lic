@@ -1,0 +1,29 @@
+# ----- REMOVE LINES ABOVE HERE --------------------------
+#
+# This license is valid from Thu Dec 15 08:03:26 UTC 2016.
+#
+# This is license NODELOCKED to HOSTID=ANY;
+# there is no need to run lmgrd for this license.
+#
+#
+# This is a permanent license generated on Thu Dec 15 08:03:26 UTC 2016
+INCREMENT SDK xilinxd 2017.12 permanent uncounted 27A40658801B \
+VENDOR_STRING=dbhumi,SDK,software,permanent,_210995377_0_0_023 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=15-Dec-2016 TS_OK
+#
+# This is a permanent license generated on Thu Dec 15 08:03:26 UTC 2016
+INCREMENT Analyzer xilinxd 2017.12 permanent uncounted EA55820BF6F2 \
+VENDOR_STRING=dbhumi,Analyzer,software,permanent,_210995377_0_0_247 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=15-Dec-2016 TS_OK
+#
+# This is a permanent license generated on Thu Dec 15 08:03:26 UTC 2016
+INCREMENT HLS xilinxd 2017.12 permanent uncounted 6230DCC2029C \
+VENDOR_STRING=dbhumi,HLS,software,permanent,_210995377_0_0_143 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=15-Dec-2016 TS_OK
+#
+# This is a permanent license generated on Thu Dec 15 08:03:26 UTC 2016
+INCREMENT V_WebPACK xilinxd 2017.12 permanent uncounted D370495CD923 \
+VENDOR_STRING=dbhumi,V_WebPACK,software,permanent,_210995377_0_0_247 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=15-Dec-2016 TS_OK
+#
+# ----- REMOVE LINES BELOW HERE --------------------------
