@@ -1,0 +1,31 @@
+*** SPICE deck for cell inverter{sch} from library xyz
+*** Created on Sat Apr 07, 2018 11:59:40
+*** Last revised on Tue Apr 10, 2018 14:45:56
+*** Written on Tue Apr 10, 2018 14:46:13 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards are described in this file:
+.include 'D:\student\scmos18.mod'
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: inverter{sch}
+Mnmos@0 net@49 A gnd gnd N L=0.4U W=0.4U
+Mnmos@1 y B gnd gnd N L=0.4U W=0.4U
+Mnmos@2 net@14 B gnd gnd N L=0.4U W=0.4U
+Mnmos@3 y A net@14 gnd N L=0.4U W=0.4U
+Mnmos@4 net@21 y gnd gnd N L=0.4U W=0.4U
+Mnmos@5 net@91 net@49 net@21 gnd N L=0.4U W=0.4U
+Mpmos@0 vdd A net@49 vdd P L=0.4U W=0.4U
+Mpmos@1 vdd B y vdd P L=0.4U W=0.4U
+Mpmos@2 net@13 B y vdd P L=0.4U W=0.4U
+Mpmos@3 vdd net@49 net@13 vdd P L=0.4U W=0.4U
+Mpmos@4 net@22 A net@91 vdd P L=0.4U W=0.4U
+Mpmos@5 vdd y net@22 vdd P L=0.4U W=0.4U
+
+
+vdd vdd gnd 1.8v
+vin A gnd pulse 0 1.8 0ns 1ps 1ps 1ns 2.002ns 50
+vin1 B gnd pulse 0 1.8 0ns 1ps 1ps 1ns 4.002ns 50
+.tran 0.02ns 50ns
+.END

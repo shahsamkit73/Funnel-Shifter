@@ -1,0 +1,40 @@
+Circuit: *** SPICE deck for cell shifter{sch} from library xyz
+
+Ignoring BSIM parameter HDIF
+Ignoring BSIM parameter ACM
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter HDIF
+Ignoring BSIM parameter ACM
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for vin.  Increasing period to 8.0002e-008
+WARNING: Node EOR@0:NMOS@3_G is floating.
+WARNING: Node EOR@1:NMOS@3_G is floating.
+
+WARNING: Less than two connections to node EOR@0:NMOS@3_G.  This node is used by M:EOR@0:NMOS@3.
+WARNING: Less than two connections to node EOR@1:NMOS@3_G.  This node is used by M:EOR@1:NMOS@3.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Apr 13 14:25:10 2018
+Total elapsed time: 1.237 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 14596
+traniter = 14564
+tranpoints = 4978
+accept = 4039
+rejected = 939
+matrix size = 46
+fillins = 18
+solver = Normal
+Thread vector: 109.2/21.5[4] 12.0/4.4[4] 3.5/1.9[4] 1.0/0.8[2]  2592/500
+Matrix Compiler1: 6.61 KB object code size  1.7/1.1/[0.4]
+Matrix Compiler2: off  [0.8]/1.1/1.6
+

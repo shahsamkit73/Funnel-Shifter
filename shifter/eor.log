@@ -1,0 +1,36 @@
+Circuit: *** SPICE deck for cell eor{sch} from library xyz
+
+Ignoring BSIM parameter HDIF
+Ignoring BSIM parameter ACM
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter HDIF
+Ignoring BSIM parameter ACM
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Node NMOS@3_G is floating.
+
+WARNING: Less than two connections to node NMOS@3_G.  This node is used by MNMOS@3.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Apr 10 15:02:47 2018
+Total elapsed time: 0.593 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 10351
+traniter = 10330
+tranpoints = 3771
+accept = 3091
+rejected = 680
+matrix size = 9
+fillins = 0
+solver = Normal
+Matrix Compiler1: 458 bytes object code size  0.3/0.2/[0.1]
+Matrix Compiler2: off  [0.1]/0.4/0.4
+

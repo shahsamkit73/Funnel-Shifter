@@ -1,0 +1,33 @@
+Circuit: *** SPICE deck for cell inverter{sch} from library xyz
+
+Ignoring BSIM parameter HDIF
+Ignoring BSIM parameter ACM
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter HDIF
+Ignoring BSIM parameter ACM
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Apr 10 14:47:15 2018
+Total elapsed time: 1.186 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 11925
+traniter = 11906
+tranpoints = 3849
+accept = 3168
+rejected = 681
+matrix size = 13
+fillins = 4
+solver = Normal
+Matrix Compiler1: 1.09 KB object code size  0.5/0.4/[0.1]
+Matrix Compiler2:     107 opcodes  0.4/[0.4]/0.7
+

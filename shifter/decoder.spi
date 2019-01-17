@@ -1,0 +1,25 @@
+*** SPICE deck for cell decoder{sch} from library xyz
+*** Created on Sat Apr 07, 2018 11:02:14
+*** Last revised on Sat Apr 07, 2018 11:08:52
+*** Written on Sat Apr 07, 2018 11:09:27 by Electric VLSI Design System,
+*version 9.01
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards are described in this file:
+.include 'I:\electric\scmos18.mod'
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: decoder{sch}
+Mnmos@0 net@2 A1 net@0 gnd N L=0.4U W=0.4U
+Mnmos@1 net@0 A0 gnd gnd N L=0.4U W=0.4U
+Mnmos@2 Y net@3 gnd gnd N L=0.4U W=0.4U
+Mpmos@0 vdd A0 net@3 vdd P L=0.4U W=0.4U
+Mpmos@1 vdd A1 net@2 vdd P L=0.4U W=0.4U
+Mpmos@2 vdd net@1 Y vdd P L=0.4U W=0.4U
+
+vdd vdd gnd 1.8v
+vin A0 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 2.002ns 50
+vin1 A1 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 4.004ns 50
+.tran 0.02ns 50ns
+.END

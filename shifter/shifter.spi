@@ -1,0 +1,62 @@
+*** SPICE deck for cell shifter{sch} from library xyz
+*** Created on Sat Mar 31, 2018 13:48:08
+*** Last revised on Tue Apr 10, 2018 15:50:21
+*** Written on Fri Apr 13, 2018 13:19:18 by Electric VLSI Design System,
+*version 9.01
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards are described in this file:
+.include F:\VLSI\DecoderVLSI\scmos18.mod
+
+*** SUBCIRCUIT eor FROM CELL eor{sch}
+.SUBCKT eor A B s
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@2 s B net@64 gnd N L=0.4U W=0.4U
+Mnmos@3 s nmos@3_g B gnd N L=0.4U W=0.4U
+Mnmos@4 net@64 A gnd gnd N L=0.4U W=0.4U
+Mpmos@2 A B s vdd P L=0.4U W=0.4U
+Mpmos@3 B A s vdd P L=0.4U W=0.4U
+Mpmos@4 vdd A net@64 vdd P L=0.4U W=0.4U
+.ENDS eor
+
+*** SUBCIRCUIT mux FROM CELL mux{sch}
+.SUBCKT mux A B S out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@11 A net@62 out gnd N L=0.4U W=0.4U
+Mnmos@12 B S out gnd N L=0.4U W=0.4U
+Mnmos@13 net@62 S gnd gnd N L=0.4U W=0.4U
+Mpmos@11 out S A vdd P L=0.4U W=0.4U
+Mpmos@12 out net@62 B vdd P L=0.4U W=0.4U
+Mpmos@13 vdd S net@62 vdd P L=0.4U W=0.4U
+.ENDS mux
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: shifter{sch}
+Xeor@0 k1 left net@6 eor
+Xeor@1 k0 left net@20 eor
+Xmux@0 z0 z2 net@6 net@60 mux
+Xmux@1 z1 z3 net@6 net@62 mux
+Xmux@2 z2 z4 net@6 net@63 mux
+Xmux@3 z3 z5 net@6 net@67 mux
+Xmux@4 z4 z6 net@6 net@82 mux
+Xmux@5 net@60 net@62 net@20 y0 mux
+Xmux@6 net@62 net@63 net@20 y1 mux
+Xmux@7 net@63 net@67 net@20 y2 mux
+Xmux@8 net@67 net@82 net@20 y3 mux
+
+vdd vdd gnd 1.8v
+vin left gnd pulse 0 1.8 0ns 1ps 1ps 80ns 02.002ns 50
+vin1 k0 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 2.002ns 50
+vin2 k1 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 4.002ns 50
+vin3 z0 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 6.002ns 50
+vin4 z1 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 8.002ns 50
+vin5 z2 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 10.002ns 50
+vin6 z3 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 12.002ns 50
+vin7 z4 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 14.002ns 50
+vin8 z5 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 16.002ns 50
+vin9 z6 gnd pulse 0 1.8 0ns 1ps 1ps 1ns 18.002ns 50
+.tran 0.02ns 50ns
+.END
